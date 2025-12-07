@@ -1,0 +1,128 @@
+/* src/VoiceLab.css */
+
+/* 전체 배경 및 폰트 설정 */
+.voice-lab-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 메인 히어로 섹션 (중앙 정렬) */
+.hero-section {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  padding: 0 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* 메인 타이틀: VOICE LAB */
+.main-title {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin: 0;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
+}
+
+/* 서브 설명 텍스트 */
+.sub-description {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* 버튼 그룹 컨테이너 */
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 공통 버튼 스타일 */
+.btn {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+}
+
+/* 음성 인식 버튼 (프로토타입 - 약간 투명하게) */
+.btn-record {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-record:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* 파일 업로드 버튼 (메인 강조) */
+.btn-upload {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: white;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-upload:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+}
+
+/* 비활성화 상태 (로딩 중) */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 옵션 선택 박스 (상황 설정) */
+.role-select {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgba(15, 23, 42, 0.8);
+  color: #cbd5e1;
+  border: 1px solid #334155;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* 결과 대시보드 컨테이너 */
+.dashboard-container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  animation: slideUp 0.8s ease-out;
+}
+
+/* 애니메이션 정의 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
